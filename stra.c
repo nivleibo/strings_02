@@ -44,7 +44,7 @@ char* Str_concat (  char destination[],const char source[])
         destination[uLength + destinationLength] = source[uLength];
         uLength++;
     }
-       destination[uLength] = '\0'; 
+       destination[uLength + destinationLength] = '\0'; 
     return destination;
 }
 
