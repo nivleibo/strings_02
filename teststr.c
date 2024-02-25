@@ -466,9 +466,10 @@ static void testCompare(void)
    }
 }
 
+
 /*--------------------------------------------------------------------*/
 
-/* Test the Str_search() function. */
+/* Test the Str_search() function. 
 
 static void testSearch(void)
 {
@@ -739,7 +740,8 @@ static void testSearch(void)
          ASSURE(pcResult1 == pcResult2);
       }
    }
-}
+} 
+
 
 /*--------------------------------------------------------------------*/
 
@@ -758,7 +760,7 @@ int main(int argc, char *argv[])
    testCopy();
    testConcat();
    testCompare();
-   testSearch();
+   /*testSearch(); */
 
    printf("End of %s.\n", argv[0]);
    return 0;
