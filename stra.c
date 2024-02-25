@@ -1,7 +1,7 @@
 /* stra.c (version 1)*/
 /* author: Niv Leibowitz */
 
-#include <stddef.h>
+
 #include "str.h" 
 #include <assert.h>
 
@@ -71,8 +71,8 @@ assert(str2 != NULL);
     return status; 
     }
 }
- /*
-	char *strstr(const char haystack[], const char needle[]) {
+ 
+/* char *strstr(const char haystack[], const char needle[]) {
 int uLength = 0;
 int haystackLength = Str_getLength(haystack); 
     while ( uLength < haystackLength ) 
@@ -93,4 +93,4 @@ Str_search
 char *strstr(const char *haystack, const char *needle)
 Finds the first occurrence of the entire string needle (not including the terminating null character) which appears in the string haystack.
 need 2 while loops
-loops for whole thing, and loop for each individual thing */
+loops for whole thing, and loop for each individual thing */ 
