@@ -23,7 +23,6 @@ char* Str_copy ( char dest[], const char src[])
     size_t uLength = 0;  
     assert(src != NULL);
     assert(dest != NULL);
-
     while (src[uLength] != '\0') {
         dest[uLength] = src[uLength];
         uLength++;
