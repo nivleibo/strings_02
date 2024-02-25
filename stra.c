@@ -27,7 +27,7 @@ char* Str_copy ( char dest[], const char src[])
         dest[uLength] = src[uLength];
         uLength++;
     }
-    
+   dest[uLength] = '\0'; 
     return dest;
 }
 
@@ -44,6 +44,7 @@ char* Str_concat (  char destination[],const char source[])
         destination[uLength + destinationLength] = source[uLength];
         uLength++;
     }
+       dest[uLength] = '\0'; 
     return destination;
 }
 
