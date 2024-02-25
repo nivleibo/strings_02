@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include "str.h" 
+#include <assert.h>
 
 
 size_t Str_getLength(const char pcSrc[])
@@ -19,8 +20,7 @@ size_t Str_getLength(const char pcSrc[])
 
 char* Str_copy ( char dest[], const char src[])
 {
-    size_t uLength = 0;
-    char src[];  
+    size_t uLength = 0;  
     assert(src != NULL);
     assert(dest != NULL);
 
@@ -51,8 +51,8 @@ char* Str_concat (  char destination[],const char source[])
 
 int Str_compare(const char str1[], const char str2[]){
 int uLength = 0;
-int length1 = Str_getLength(Str1);
-int length2 = Str_getLength(Str2); 
+int length1 = Str_getLength(str1);
+int length2 = Str_getLength(str2); 
 int status = 0;
 assert(str1 != NULL);
 assert(str2 != NULL);
@@ -86,7 +86,7 @@ int haystackLength = Str_getLength(haystack);
     }
 
     }
-/*
+
 change function names 
 Str_search
 
