@@ -53,7 +53,7 @@ int Str_compare(const char str1[], const char str2[]){
     assert(str1 != NULL);
     assert(str2 != NULL);
 
-    while ( str1[uLength] !='\0' && str2[uLength] !='\0' ) {
+    while ( str1[uLength] !='\0' || str2[uLength] !='\0' ) {
         if (str1[uLength] == str2[uLength]) { 
             uLength++;
         }
@@ -64,8 +64,9 @@ int Str_compare(const char str1[], const char str2[]){
         else if (str1[uLength] > str2[uLength]) {
             return 1;   
         }
-    return 0; 
+   
     }
+ return 0; 
 }
  
 /* char *strstr(const char haystack[], const char needle[]) {
