@@ -49,14 +49,11 @@ char* Str_concat (  char destination[],const char source[])
 
 
 int Str_compare(const char str1[], const char str2[]){
-int uLength = 0;
-int length1 = Str_getLength(str1);
-int length2 = Str_getLength(str2); 
-int status = 0;
-assert(str1 != NULL);
-assert(str2 != NULL);
+    int uLength = 0; 
+    assert(str1 != NULL);
+    assert(str2 != NULL);
 
-    while ( uLength <=  length1) {
+    while ( str1[uLength] != '/0' || str2[uLength] != '/0' ) {
         if (str1[uLength] == str2[uLength]) { 
             uLength++;
         }
@@ -67,7 +64,7 @@ assert(str2 != NULL);
         else if (str1[uLength] > str2[uLength]) {
             return 1;   
         }
-    return status; 
+    return 0; 
     }
 }
  
