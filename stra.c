@@ -1,6 +1,7 @@
 /* stra.c (version 1)*/
 /* author: Niv Leibowitz */
 
+#include <stddef.h>
 #include "str.h" 
 
 
