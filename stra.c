@@ -89,7 +89,6 @@ if (needleLength == 0) {
  } 
     while ( outerloop < haystackLength ) 
  {    
- 
       innerloop = 0;
       while (innerloop < needleLength )
         {
@@ -102,9 +101,9 @@ if (needleLength == 0) {
             outerloop++;
             break;
         }
-        return (char*) &haystack[outerloop-needleLength-1];
         }
         outerloop++;
+        return (char*) &haystack[outerloop-needleLength-1];
     }
     return NULL;
     }
