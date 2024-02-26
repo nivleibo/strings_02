@@ -77,10 +77,15 @@ int haystackLength = Str_getLength(haystack);
 int needleLength = Str_getLength(needle); 
 assert(haystack != NULL);
 assert(needle != NULL);
- if (Str_getLength(haystack) == 0) {
+ 
+if (haystackLength == 0 && needleLength == 0) {
+    return (char*) &haystack[outerloop];
+}
+
+ if (haystackLength == 0) {
     return NULL;
  }
-if (Str_getLength(needle) == 0) {
+if (needleLength == 0) {
     return NULL;
  }
     while ( outerloop < haystackLength ) 
