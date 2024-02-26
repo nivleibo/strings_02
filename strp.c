@@ -19,7 +19,7 @@ assert(dest != NULL);
 
 index = dest; 
 while (*src != '\0'){
-  *index = *src
+  *index = *src;
   index++;
   src++;
 }
@@ -32,20 +32,19 @@ char* Str_concat (  char *destination,const char *source) {
   assert(destination != NULL);
     assert(source != NULL);
 
-index = dest;
+index = destination;
     while (*index != '\0'  ) {
     index++;
     }
-while (source != '\0') {
+while (*source != '\0') {
    *index++ = *source++;
 }
 index = '\0';   
-return dest; 
+return destination; 
 }
 
 int Str_compare(const char *str1, const char * str2){
 return 0; 
-
 }
 
 char* Str_search (const char *haystack, const char *needle) {
