@@ -44,7 +44,30 @@ return destination;
 }
 
 int Str_compare(const char *str1, const char * str2){
+char* index1;
+char* index2;
+assert(str1 != NULL);
+assert(str2 != NULL);
+
+index1 = str1;
+index2= str2;
+
+while (index1 != '\0' || index2 != '\0') {
+if (*index1 == *index2){
+   index1++;
+   index2++;
+}
+else if (*index1 < *index2 ) {
+   return -1;
+}
+else if (*index1 > *index2){
+   return 1;
+}
+
+}
+
 return 0; 
+
 }
 
 char* Str_search (const char *haystack, const char *needle) {
