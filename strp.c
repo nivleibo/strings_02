@@ -12,13 +12,43 @@ size_t Str_getLength(const char *pcSrc)
    return (size_t)(pcEnd - pcSrc);
 }
 
-char *Str_copy(char *dest, const char *src[]) {
+char *Str_copy(char *dest, const char *src) {
+char *index; 
+assert(src != NULL);
+assert(dest != NULL);
 
+index = dest; 
+while (*src != '\0'){
+  *index = *src
+  index++;
+  src++;
+}
+index = '\0';   
+return dest;  
+}
+
+char* Str_concat (  char *destination,const char *source) {
+ char* index;
+  assert(destination != NULL);
+    assert(source != NULL);
+
+index = dest;
+    while (*index != '\0'  ) {
+    index++;
+    }
+while (source != '\0') {
+   *index++ = *source++;
+}
+index = '\0';   
+return dest; 
+}
+
+int Str_compare(const char *str1, const char * str2){
+return 0; 
 
 }
 
-char* Str_concat (  char destination[],const char source[]);
+char* Str_search (const char *haystack, const char *needle) {
 
-int Str_compare(const char str1[], const char str2[]);
-
-char* Str_search (const char haystack[], const char needle[]);
+   return NULL
+}
