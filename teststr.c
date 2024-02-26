@@ -469,7 +469,6 @@ static void testCompare(void)
 
 /*--------------------------------------------------------------------*/
 
- Test the Str_search() function. 
 
 static void testSearch(void)
 {
