@@ -81,13 +81,12 @@ assert(needle != NULL);
 if (haystackLength == 0 && needleLength == 0) {
     return (char*) &haystack[outerloop];
 }
-
  if (haystackLength == 0) {
     return NULL;
  }
 if (needleLength == 0) {
-    return NULL;
- }
+    return &haystack[outerloop];
+ } 
     while ( outerloop < haystackLength ) 
  {    
  
