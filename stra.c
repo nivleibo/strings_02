@@ -79,7 +79,7 @@ assert(haystack != NULL);
 assert(needle != NULL);
  
  if (needle[outerloop] == '\0' ) {
-    return haystack; 
+    return (char*) haystack; 
  }
     while ( outerloop < haystackLength ) 
  {    
@@ -96,9 +96,9 @@ assert(needle != NULL);
             outerloop++;
             break;
         }
-        return haystack[outerloop-needleLength-1];
+        return (char*) haystack[outerloop-needleLength-1];
         }
         outerloop++;
     }
-    return haystack;
+    return (char*) haystack;
     }
