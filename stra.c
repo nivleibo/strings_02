@@ -87,7 +87,7 @@ assert(needle != NULL);
       innerloop = 0;
       while (innerloop < needleLength )
         {
-         if (Str_compare(haystack[outerloop], needle[innerloop]) == 0 )
+         if (Str_compare(&haystack[outerloop], &needle[innerloop]) == 0 )
          {
             innerloop++;
             outerloop++;
