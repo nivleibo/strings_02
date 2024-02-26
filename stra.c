@@ -100,5 +100,5 @@ assert(needle != NULL);
         }
         outerloop++;
     }
-    return (char*) &haystack;
+    return (char*) haystack;
     }
