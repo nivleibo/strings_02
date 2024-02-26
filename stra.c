@@ -85,7 +85,7 @@ if (haystackLength == 0 && needleLength == 0) {
     return NULL;
  }
 if (needleLength == 0) {
-    return &haystack[outerloop];
+    return (char*) &haystack[outerloop];
  } 
     while ( outerloop < haystackLength ) 
  {    
