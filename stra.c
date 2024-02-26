@@ -96,9 +96,9 @@ assert(needle != NULL);
             outerloop++;
             break;
         }
-        return (char*) haystack[outerloop-needleLength-1];
+        return (char*) &haystack[outerloop-needleLength-1];
         }
         outerloop++;
     }
-    return (char*) haystack;
+    return (char*) &haystack;
     }
