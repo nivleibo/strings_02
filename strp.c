@@ -19,12 +19,12 @@ assert(dest != NULL);
 
 index = dest; 
 while (*src != '\0'){
-  *index = *src;
-  index++;
+  *dest = *src;
+  dest++;
   src++;
 }
-index = '\0';   
-return dest;  
+dest = '\0';   
+return index;  
 }
 
 char* Str_concat (  char *destination,const char *source) {
