@@ -39,7 +39,7 @@ index = destination;
 while (*source != '\0') {
    *index++ = *source++;
 }
-index = '\0';   
+*index = '\0';   
 return destination; 
 }
 
