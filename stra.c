@@ -70,25 +70,35 @@ int Str_compare(const char str1[], const char str2[]){
  return 0; 
 }
  
-/* char *strstr(const char haystack[], const char needle[]) {
-int uLength = 0;
+char* Str_search (const char haystack[], const char needle[]) {
+int outerloop = 0;
+int innerloop = 0;
 int haystackLength = Str_getLength(haystack); 
-    while ( uLength < haystackLength ) 
+int needleLength = Str_getLength(needle); 
+assert(haystack != NULL);
+assert(needle != NULL);
+ 
+ if (needle[outerloop] == '\0' ) {
+    return haystack; 
+ }
+    while ( outerloop < haystackLength ) 
  {    
-      while ( )
+ 
+      innerloop = 0;
+      while (innerloop < needleLength )
         {
-            strcmp()
+         if (Str_compare(haystack[outerloop], needle[innerloop]) == 0 )
+         {
+            innerloop++;
+            outerloop++;
+         }
+        else {
+            outerloop++;
+            break;
         }
-        
-
+        return haystack[outerloop-needleLength-1];
+        }
+        outerloop++;
     }
-
+    return haystack;
     }
-
-change function names 
-Str_search
-
-char *strstr(const char *haystack, const char *needle)
-Finds the first occurrence of the entire string needle (not including the terminating null character) which appears in the string haystack.
-need 2 while loops
-loops for whole thing, and loop for each individual thing */ 
