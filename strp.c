@@ -49,5 +49,5 @@ return 0;
 
 char* Str_search (const char *haystack, const char *needle) {
 
-   return NULL
+   return NULL;
 }
