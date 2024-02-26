@@ -52,7 +52,8 @@ assert(str2 != NULL);
 index1 = str1;
 index2= str2;
 
-while (index1 != '\0' || index2 != '\0') {
+
+while (*index1 != '\0' || *index2 != '\0') {
 if (*index1 == *index2){
    index1++;
    index2++;
